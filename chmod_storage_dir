@@ -1,1 +1,2 @@
-chmod -R gu+w storage
+chgrp -R www-data storage
+chmod -R 775 storage

@@ -7,6 +7,11 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller {
 
+    /**
+     * Where to redirect upon after successful registration.
+     * @var string
+     */
+    protected $redirectTo = 'notices/create';
 	/*
 	|--------------------------------------------------------------------------
 	| Registration & Login Controller
