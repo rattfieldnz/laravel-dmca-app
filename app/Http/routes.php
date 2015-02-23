@@ -1,4 +1,4 @@
-<?php
+.<?php
 
 /*
 |--------------------------------------------------------------------------
@@ -11,10 +11,15 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+/**
+ * Home Page
+ */
+//Route::get('/', 'WelcomeController@index');
+Route::get('/', 'PagesController@home');
 
-Route::get('home', 'HomeController@index');
-
+/**
+ * Authentication
+ */
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
