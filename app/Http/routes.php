@@ -20,7 +20,7 @@ Route::get('/', 'PagesController@home');
 /**
  * Notices
  */
-Route::get('notices/crate/confirm', 'NoticesController@confirm');
+Route::get('notices/create/confirm', 'NoticesController@confirm');
 Route::resource('notices', 'NoticesController');
 
 /**
