@@ -1,4 +1,6 @@
 var elixir = require('laravel-elixir');
+//var cachebust = require('gulp-cachebust');
+//var gulp = require('gulp');
 
 /*
  |--------------------------------------------------------------------------
@@ -12,5 +14,17 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.less('app.less');
+    mix.sass('app.scss');
+
+    mix.styles([
+        'vendor/bootstrap.css',
+        'app.css'
+    ], null, 'public/css')
 });
+
+
+//gulp.src('./dist/*/*.html')
+//.pipe(cachebust({
+//    type: 'timestamp'
+//}))
+//    .pipe(gulp.dest('./dist'));

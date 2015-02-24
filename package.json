@@ -1,6 +1,10 @@
 {
   "devDependencies": {
-    "gulp": "^3.8.8",
+    "gulp": "^3.8.11",
+    "gulp-cachebust": "0.0.5",
     "laravel-elixir": "*"
+  },
+  "dependencies": {
+    "node-notifier": "^4.1.2"
   }
 }
