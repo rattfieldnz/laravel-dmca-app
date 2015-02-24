@@ -1,9 +1,9 @@
 <?php namespace App\Http\Controllers;
 
 use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use App\Http\Requests\PrepareNoticeRequest;
+use App\Provider;
 
-use Illuminate\Http\Request;
 
 /**
  * Class NoticesController
@@ -34,10 +34,19 @@ class NoticesController extends Controller {
      */
     public function create()
     {
-        //get list of providers
-        //load view to create notice
+        $providers = Provider::lists('name', 'id');
 
-        return view('notices.create');
+        //load view to create notice
+        return view('notices.create', compact('providers'));
+    }
+
+    /**
+     * @param PrepareNoticeRequest $request
+     * @return array
+     */
+    public function confirm(PrepareNoticeRequest $request)
+    {
+        return $request->all();
     }
 
 }
