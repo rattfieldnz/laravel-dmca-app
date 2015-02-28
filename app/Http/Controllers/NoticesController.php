@@ -102,7 +102,7 @@ class NoticesController extends Controller {
     {
         $notice = session()->get('dmca') + ['template' => $request->input('template')];
 
-        $notice = $this->user->notices->create($notice);
+        $notice = $this->user->notices()->create($notice);
 
         return $notice;
     }
